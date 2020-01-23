@@ -24,6 +24,11 @@ const Footer = () => (
         <Icon src={require("../images/linkedin-in-brands.svg")} />
       </IconBackground>
       <IconBackground
+        onClick={() => window.open("https://github.com/tinaavbelj", "_blank")}
+      >
+        <Icon src={require("../images/github-brands.svg")} />
+      </IconBackground>
+      <IconBackground
         onClick={() =>
           window.open("https://www.dribbble.com/tinaavbelj/", "_blank")
         }
