@@ -1,20 +1,22 @@
 export const colors = {
-  primary: "#047857",
+  primary: "#F91E62",
   secondary: "#F49EBC",
   tertiary: "#D9D9FF",
   white: "#FFFFFF",
   black: "#000000",
-  text: "#002308",
-  background: "#EDF1FF"
+  text: "#1B056B",
+  background: "#F1EDFF",
+  background2: "#f7f5ff"
 };
 
 export const paddingSmall = "24px";
-export const paddingMedium = "54px";
-export const paddingLarge = "120px";
+export const paddingMedium = "72px";
+export const paddingLarge = "100px";
 
 export const xMarginMobile = "16px";
 
 export const contentWidth = "800px";
+export const contentWidthNarrow = "600px";
 
 const size = {
   mobileS: "320px",

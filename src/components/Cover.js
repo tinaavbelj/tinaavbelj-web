@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import {
   device,
-  contentWidth,
+  contentWidthNarrow,
   paddingSmall,
   xMarginMobile
 } from "../constants/variables";
@@ -11,23 +11,24 @@ import {
 const Contact = () => (
   <Wrapper>
     <Content>
-      <Text>Frontend developer</Text>
+      <Text>Hi. I am Tina. I am a frontend developer based in Ljubljana.</Text>
     </Content>
   </Wrapper>
 );
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   padding: ${paddingSmall} 0;
 `;
 
 const Content = styled.div`
-  max-width: ${contentWidth};
+  max-width: ${contentWidthNarrow};
   margin: 0 ${xMarginMobile};
   @media ${device.laptop} {
     margin: auto;
   }
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,8 +36,8 @@ const Content = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 34px;
+  font-weight: 500;
   text-align: center;
 `;
 

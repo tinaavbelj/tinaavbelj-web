@@ -4,26 +4,22 @@ import styled from "styled-components";
 import {
   device,
   contentWidth,
-  paddingSmall,
+  paddingLarge,
+  paddingMedium,
   xMarginMobile
 } from "../constants/variables";
 
-const Navigation = () => (
+const Projects = () => (
   <Wrapper>
     <Content>
-      <Logo src={require("../images/tinaavbelj-logo-darkblue.svg")} />
-      <Name></Name>
+      <Title>Projects</Title>
     </Content>
   </Wrapper>
 );
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: ${xMarginMobile} 0;
-
-  @media ${device.laptop} {
-    padding: ${paddingSmall} 0;
-  }
+  padding: ${paddingLarge} 0;
 `;
 
 const Content = styled.div`
@@ -33,19 +29,16 @@ const Content = styled.div`
     margin: auto;
   }
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 100%;
 `;
 
-const Logo = styled.img`
-  width: 50px;
-  margin-right: ${paddingSmall};
-`;
-
-const Name = styled.div`
-  font-weight: 600;
+const Title = styled.div`
+  margin-bottom: ${paddingMedium};
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 24px;
 `;
 
-export default Navigation;
+export default Projects;
