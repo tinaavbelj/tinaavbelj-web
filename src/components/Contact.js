@@ -2,33 +2,25 @@ import React from "react";
 import styled from "styled-components";
 
 import {
-  colors,
   device,
   contentWidth,
-  paddingSmall,
+  paddingMedium,
+  paddingLarge,
   xMarginMobile
 } from "../constants/variables";
 
 const Contact = () => (
   <Wrapper>
     <Content>
-      <IconBackground
-        onClick={() =>
-          window.open("https://www.linkedin.com/in/tina-avbelj/", "_blank")
-        }
-      >
-        <Icon src={require("../images/linkedin.svg")} />
-      </IconBackground>
-      <IconBackground>
-        <Icon src={require("../images/mail.svg")} />
-      </IconBackground>
+      <Title>Contact</Title>
+      <Email>tina.avbelj@gmail.com</Email>
     </Content>
   </Wrapper>
 );
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: ${paddingSmall} 0;
+  padding: ${paddingLarge} 0;
 `;
 
 const Content = styled.div`
@@ -38,33 +30,21 @@ const Content = styled.div`
     margin: auto;
   }
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
 `;
 
-const Icon = styled.img`
-  width: 30px;
+const Title = styled.div`
+  margin-bottom: ${paddingMedium};
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
 `;
 
-const IconBackground = styled.div`
-  background-color: ${colors.tertiary};
-  width: 56px;
-  height: 56px;
-  border-radius: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.2s;
-
-  &:not(:first-child) {
-    margin-left: 24px;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
+const Email = styled.div``;
 
 export default Contact;
