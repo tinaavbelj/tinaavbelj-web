@@ -17,6 +17,7 @@ function App() {
       <Navigation />
       <Cover />
       <Skills />
+      <Projects />
       <Contact />
       <Footer />
     </Wrapper>

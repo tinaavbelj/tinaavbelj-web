@@ -9,10 +9,18 @@ import {
   xMarginMobile
 } from "../constants/variables";
 
+import ProjectItem from "./ProjectItem";
+
 const Projects = () => (
   <Wrapper>
     <Content>
-      <Title>Projects</Title>
+      <Title>My Projects</Title>
+      <ProjectItem
+        title="Icons"
+        text="A collection of editable svg icons. I am often adding new icons."
+        imageSource={require("../images/icons-project.svg")}
+        link="https://icons.lepus-arcticus.com"
+      ></ProjectItem>
     </Content>
   </Wrapper>
 );
