@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-import { device, colors } from "../constants/variables";
+import { colors } from "../constants/variables";
 
 const ProjectItem = ({ title, text, imageSource, link }) => (
   <BoxShadow onClick={() => window.open(link, "_blank")}>
     <ImageWrapper>
-      <Image src={imageSource} />
+      <img src={imageSource} />
     </ImageWrapper>
     <InformationWrapper>
-      <Information>
+      <div>
         <Title>{title}</Title>
         <Text>{text}</Text>
-      </Information>
+      </div>
       <IconWrapper>
         <IconArrow src={require("../images/arrow-right.svg")} />
       </IconWrapper>
@@ -50,19 +50,12 @@ const ImageWrapper = styled.div`
   justify-content: center;
 `;
 
-const Image = styled.img`
-  @media ${device.laptop} {
-  }
-`;
-
 const InformationWrapper = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
-
-const Information = styled.div``;
 
 const Title = styled.div`
   margin-bottom: 0.75rem;
