@@ -21,12 +21,14 @@ const Projects = () => (
           text="A collection of editable svg icons. I am often adding new icons."
           imageSource={require("../images/icons-project.svg")}
           link="https://icons.lepus-arcticus.com"
+          github="https://github.com/tinaavbelj/lepus-arcticus-icons"
         ></ProjectItem>
         <ProjectItem
           title="Avatars"
           text="An avatar maker for svg avatars with different shapes and colors."
           imageSource={require("../images/avatars-project.svg")}
           link="https://avatars.lepus-arcticus.com"
+          github="https://github.com/tinaavbelj/avatar-maker"
         ></ProjectItem>
       </ItemsWrapper>
     </Content>

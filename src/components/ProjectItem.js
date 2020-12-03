@@ -3,22 +3,34 @@ import styled from "styled-components";
 
 import { colors, paddingSmall, device } from "../constants/variables";
 
-const ProjectItem = ({ title, text, imageSource, link }) => (
-  <BoxShadow onClick={() => window.open(link, "_blank")}>
-    <ImageWrapper>
-      <img src={imageSource} alt="cover" />
-    </ImageWrapper>
-    <InformationWrapper>
-      <div>
-        <Title>{title}</Title>
-        <Text>{text}</Text>
-      </div>
-      <IconWrapper>
-        <IconArrow src={require("../images/arrow-right.svg")} alt="arrow" />
-      </IconWrapper>
-    </InformationWrapper>
-  </BoxShadow>
-);
+const ProjectItem = ({ title, text, imageSource, link, github }) => {
+  const handleGithubClick = (e) => {
+    e.stopPropagation();
+    window.open(github, "_blank");
+  };
+
+  return (
+    <BoxShadow onClick={() => window.open(link, "_blank")}>
+      <ImageWrapper>
+        <img src={imageSource} alt="cover" />
+      </ImageWrapper>
+      <InformationWrapper>
+        <div>
+          <Title>{title}</Title>
+          <Text>{text}</Text>
+        </div>
+        <IconWrapper>
+          <IconGithub
+            src={require("../images/github-brands.svg")}
+            alt="github"
+            onClick={handleGithubClick}
+          />
+          <IconArrow src={require("../images/arrow-right.svg")} alt="arrow" />
+        </IconWrapper>
+      </InformationWrapper>
+    </BoxShadow>
+  );
+};
 
 const IconArrow = styled.img`
   transition: 0.2s ease-out;
@@ -83,7 +95,18 @@ const Text = styled.div`
 
 const IconWrapper = styled.div`
   padding-right: 6px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const IconGithub = styled.img`
+  transition: 0.2s ease-out;
+  heigth: 24px;
+  width: 24px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 export default ProjectItem;
