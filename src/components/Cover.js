@@ -5,7 +5,7 @@ import {
   device,
   contentWidthNarrow,
   paddingSmall,
-  xMarginMobile
+  xMarginMobile,
 } from "../constants/variables";
 
 const Contact = () => (
@@ -23,10 +23,10 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-  max-width: ${contentWidthNarrow};
   margin: 0 ${xMarginMobile};
   @media ${device.laptop} {
     margin: auto;
+    max-width: ${contentWidthNarrow};
   }
 
   display: flex;

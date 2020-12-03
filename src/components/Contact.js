@@ -6,7 +6,7 @@ import {
   contentWidth,
   paddingMedium,
   paddingLarge,
-  xMarginMobile
+  xMarginMobile,
 } from "../constants/variables";
 
 const Contact = () => (
@@ -20,7 +20,7 @@ const Contact = () => (
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: ${paddingLarge} 0;
+  padding: ${paddingLarge} 0 calc(2 * ${paddingLarge}) 0;
 `;
 
 const Content = styled.div`

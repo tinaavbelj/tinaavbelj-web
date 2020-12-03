@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import { colors } from "../constants/variables";
+import { colors, paddingSmall, device } from "../constants/variables";
 
 const ProjectItem = ({ title, text, imageSource, link }) => (
   <BoxShadow onClick={() => window.open(link, "_blank")}>
     <ImageWrapper>
-      <img src={imageSource} />
+      <img src={imageSource} alt="cover" />
     </ImageWrapper>
     <InformationWrapper>
       <div>
@@ -14,7 +14,7 @@ const ProjectItem = ({ title, text, imageSource, link }) => (
         <Text>{text}</Text>
       </div>
       <IconWrapper>
-        <IconArrow src={require("../images/arrow-right.svg")} />
+        <IconArrow src={require("../images/arrow-right.svg")} alt="arrow" />
       </IconWrapper>
     </InformationWrapper>
   </BoxShadow>
@@ -27,6 +27,7 @@ const IconArrow = styled.img`
 const BoxShadow = styled.div`
   width: 100%;
   max-width: 350px;
+  min-width: 300px;
   background-color: ${colors.backgroundLight};
   border-radius: 10px;
   box-shadow: 5px 5px 18px rgb(27, 5, 107, 0.1);
@@ -37,6 +38,17 @@ const BoxShadow = styled.div`
 
     ${IconArrow} {
       transform: translateX(6px);
+    }
+  }
+
+  &:not(:first-child) {
+    margin-top: ${paddingSmall};
+  }
+
+  @media ${device.laptop} {
+    &:not(:first-child) {
+      margin-left: ${paddingSmall};
+      margin-top: 0;
     }
   }
 `;
