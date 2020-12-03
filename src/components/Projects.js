@@ -6,7 +6,7 @@ import {
   contentWidth,
   paddingLarge,
   paddingMedium,
-  xMarginMobile
+  xMarginMobile,
 } from "../constants/variables";
 
 import ProjectItem from "./ProjectItem";
@@ -15,12 +15,20 @@ const Projects = () => (
   <Wrapper>
     <Content>
       <Title>My Projects</Title>
-      <ProjectItem
-        title="Icons"
-        text="A collection of editable svg icons. I am often adding new icons."
-        imageSource={require("../images/icons-project.svg")}
-        link="https://icons.lepus-arcticus.com"
-      ></ProjectItem>
+      <ItemsWrapper>
+        <ProjectItem
+          title="Icons"
+          text="A collection of editable svg icons. I am often adding new icons."
+          imageSource={require("../images/icons-project.svg")}
+          link="https://icons.lepus-arcticus.com"
+        ></ProjectItem>
+        <ProjectItem
+          title="Avatars"
+          text="An avatar maker for svg avatars with different shapes and colors."
+          imageSource={require("../images/avatars-project.svg")}
+          link="https://avatars.lepus-arcticus.com"
+        ></ProjectItem>
+      </ItemsWrapper>
     </Content>
   </Wrapper>
 );
@@ -47,6 +55,17 @@ const Title = styled.div`
   letter-spacing: 2px;
   font-weight: 600;
   font-size: 24px;
+`;
+
+const ItemsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media ${device.laptop} {
+    flex-direction: row;
+  }
 `;
 
 export default Projects;

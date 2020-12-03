@@ -4,8 +4,9 @@ import styled from "styled-components";
 import {
   device,
   contentWidth,
-  paddingMedium,
-  xMarginMobile
+  paddingLarge,
+  xMarginMobile,
+  colors,
 } from "../constants/variables";
 
 const Footer = () => (
@@ -13,7 +14,7 @@ const Footer = () => (
     <Content>
       <a href="mailto:tina.avbelj@gmail.com" target="_top">
         <IconBackground>
-          <Icon src={require("../images/mail.svg")} />
+          <Icon src={require("../images/mail-pink.svg")} />
         </IconBackground>
       </a>
       <IconBackground
@@ -21,26 +22,26 @@ const Footer = () => (
           window.open("https://www.linkedin.com/in/tina-avbelj/", "_blank")
         }
       >
-        <Icon src={require("../images/linkedin-in-brands.svg")} />
+        <Icon src={require("../images/linkedin-in-brands-pink.svg")} />
       </IconBackground>
       <IconBackground
         onClick={() => window.open("https://github.com/tinaavbelj", "_blank")}
       >
-        <Icon src={require("../images/github-brands.svg")} />
+        <Icon src={require("../images/github-brands-pink.svg")} />
       </IconBackground>
       <IconBackground
         onClick={() =>
           window.open("https://www.dribbble.com/tinaavbelj/", "_blank")
         }
       >
-        <Icon src={require("../images/dribbble-brands.svg")} />
+        <Icon src={require("../images/dribbble-brands-pink.svg")} />
       </IconBackground>
       <IconBackground
         onClick={() =>
           window.open("https://www.behance.net/tinaavbelj", "_blank")
         }
       >
-        <Icon src={require("../images/behance-brands.svg")} />
+        <Icon src={require("../images/behance-brands-pink.svg")} />
       </IconBackground>
     </Content>
   </Wrapper>
@@ -48,7 +49,8 @@ const Footer = () => (
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: ${paddingMedium} 0;
+  padding: ${paddingLarge} 0;
+  background-color: ${colors.text};
 `;
 
 const Content = styled.div`
