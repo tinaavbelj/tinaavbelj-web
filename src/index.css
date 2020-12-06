@@ -5,6 +5,10 @@
   font-size: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   font-family: "Barlow", sans-serif;
