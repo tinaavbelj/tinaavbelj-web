@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { colors, paddingSmall, device } from "../constants/variables";
+import { colors, paddingMedium, device } from "../constants/variables";
 
 const ProjectItem = ({ title, text, imageSource, link, github }) => {
   const handleGithubClick = (e) => {
@@ -54,12 +54,12 @@ const BoxShadow = styled.div`
   }
 
   &:not(:first-child) {
-    margin-top: ${paddingSmall};
+    margin-top: ${paddingMedium};
   }
 
   @media ${device.laptop} {
     &:not(:first-child) {
-      margin-left: ${paddingSmall};
+      margin-left: ${paddingMedium};
       margin-top: 0;
     }
   }
