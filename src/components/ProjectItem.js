@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import { colors, paddingMedium, device } from "../constants/variables";
 
@@ -10,10 +11,12 @@ const ProjectItem = ({ title, text, imageSource, link, github }) => {
   };
 
   return (
-    <BoxShadow onClick={() => window.open(link, "_blank")}>
-      <ImageWrapper>
-        <img src={imageSource} alt="cover" />
-      </ImageWrapper>
+    <BoxShadow>
+      <Link to="/icons">
+        <ImageWrapper>
+          <img src={imageSource} alt="cover" />
+        </ImageWrapper>
+      </Link>
       <InformationWrapper>
         <div>
           <Title>{title}</Title>
