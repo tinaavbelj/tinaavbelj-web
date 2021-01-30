@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import {
   device,
-  contentWidthNarrow,
+  contentWidth,
   paddingSmall,
   xMarginMobile,
   colors,
@@ -54,7 +54,7 @@ const Content = styled.div`
   margin: 0 ${xMarginMobile};
   @media ${device.laptop} {
     margin: auto;
-    max-width: ${contentWidthNarrow};
+    max-width: ${contentWidth};
   }
 
   display: flex;
@@ -65,16 +65,16 @@ const Content = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 34px;
-  font-weight: 500;
-  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: left;
 `;
 
 const TextSmall = styled.div`
-  margin-top: ${paddingSmall};
+  margin-top: 32px;
   font-size: 24px;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
 `;
 
 const LinkText = styled.span`
