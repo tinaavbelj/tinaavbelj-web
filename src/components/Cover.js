@@ -68,10 +68,11 @@ const Content = styled.div`
 const Text = styled.div`
   font-size: 36px;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
 
   @media ${device.laptop} {
     font-size: 40px;
+    text-align: left;
   }
 `;
 
@@ -79,7 +80,11 @@ const TextSmall = styled.div`
   margin-top: 32px;
   font-size: 24px;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
+
+  @media ${device.laptop} {
+    text-align: left;
+  }
 `;
 
 const LinkText = styled.span`

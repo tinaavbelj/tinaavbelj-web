@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import {
@@ -24,6 +24,11 @@ import uiCart from "../../../images/foodspace/foodspace-ui-cart.png";
 import uiLandingPage from "../../../images/foodspace/foodspace-landing-page.png";
 
 const Foodspace = () => {
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.scrollTop = 0;
+  });
+
   return (
     <div>
       <ProjectPanel>

@@ -1,24 +1,31 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import {
   device,
   contentWidth,
   paddingSmall,
   xMarginMobile,
+  colors,
 } from "../constants/variables";
 
 const Navigation = () => (
   <Wrapper>
     <Content>
       <div>
-        <Logo src={require("../images/tinaavbelj-logo-darkblue.svg")} />
-        <Name></Name>
+        <Link to="/">
+          <Logo src={require("../images/tinaavbelj-logo-darkblue.svg")} />
+        </Link>
       </div>
       <Links>
-        <Link>About</Link>
-        <Link>Projects</Link>
-        <Link>Contact</Link>
+        <StyledLink smooth to="/#what-i-do">
+          What I do
+        </StyledLink>
+        <StyledLink smooth to="/#projects">
+          Projects
+        </StyledLink>
       </Links>
     </Content>
   </Wrapper>
@@ -58,18 +65,17 @@ const Logo = styled.img`
   }
 `;
 
-const Name = styled.div`
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-`;
-
 const Links = styled.div`
   display: flex;
 `;
 
-const Link = styled.div`
+const StyledLink = styled(HashLink)`
   cursor: pointer;
+  color: ${colors.text};
+
+  &:hover {
+    color: ${colors.primary};
+  }
 
   &:not(:first-child) {
     margin-left: 16px;

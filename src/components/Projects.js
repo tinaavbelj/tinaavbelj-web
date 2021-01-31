@@ -16,34 +16,36 @@ import iconsImage from "../images/project-preview-icons.png";
 import iconsFoodspace from "../images/project-preview-foodspace.png";
 
 const Projects = () => (
-  <Wrapper>
-    <Content>
-      <Title>My Projects</Title>
-      <ItemsWrapper>
-        <ProjectItem
-          title="Foodspace"
-          text="A mobile app that enables businesses to sell surplus food"
-          imageSource={iconsFoodspace}
-          link="/foodspace"
-          github="https://github.com/tinaavbelj/avatar-maker"
-        ></ProjectItem>
-        <ProjectItem
-          title="Icons"
-          text="A collection of editable svg icons that can be downloaded from the website"
-          imageSource={iconsImage}
-          link="/icons"
-          github="https://github.com/tinaavbelj/lepus-arcticus-icons"
-        ></ProjectItem>
-        <StyledProjectItem
-          title="Avatars"
-          text="An avatar maker for svg avatars with different shapes and colors."
-          imageSource={iconsImage}
-          link="https://avatars.lepus-arcticus.com"
-          github="https://github.com/tinaavbelj/avatar-maker"
-        ></StyledProjectItem>
-      </ItemsWrapper>
-    </Content>
-  </Wrapper>
+  <section id="projects">
+    <Wrapper>
+      <Content>
+        <Title>Projects</Title>
+        <ItemsWrapper>
+          <ProjectItem
+            title="Foodspace"
+            text="A mobile app that enables businesses to sell surplus food"
+            imageSource={iconsFoodspace}
+            link="/foodspace"
+            github="https://github.com/tinaavbelj/avatar-maker"
+          ></ProjectItem>
+          <ProjectItem
+            title="Icons"
+            text="A collection of editable svg icons that can be downloaded from the website"
+            imageSource={iconsImage}
+            link="/icons"
+            github="https://github.com/tinaavbelj/lepus-arcticus-icons"
+          ></ProjectItem>
+          <StyledProjectItem
+            title="Avatars"
+            text="An avatar maker for svg avatars with different shapes and colors."
+            imageSource={iconsImage}
+            link="https://avatars.lepus-arcticus.com"
+            github="https://github.com/tinaavbelj/avatar-maker"
+          ></StyledProjectItem>
+        </ItemsWrapper>
+      </Content>
+    </Wrapper>
+  </section>
 );
 
 const Wrapper = styled.div`

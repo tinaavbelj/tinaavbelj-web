@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import { device } from "../../../constants/variables";
@@ -9,6 +9,11 @@ import image from "../../../images/icons-ui-04.png";
 import ProjectPanel from "../shared/ProjectPanel";
 
 const Icons = () => {
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.scrollTop = 0;
+  });
+
   return (
     <div>
       <ProjectPanel>
