@@ -65,13 +65,19 @@ const Foodspace = () => {
           <Image src={uiSplashscreen} />
           <TextRight>
             <TitleUppercase>Splashscreen</TitleUppercase>
-            <Text>hi</Text>
+            <Text>
+              This is the landing page for the customers (restaurants, grocery
+              stores
+            </Text>
           </TextRight>
         </UiItem>
         <UiItemRight>
           <TextLeft>
             <TitleUppercase>Choose items</TitleUppercase>
-            <Text>hi</Text>
+            <Text>
+              This is the landing page for the customers (restaurants, grocery
+              stores
+            </Text>
           </TextLeft>
           <Image src={uiDiscover} />
         </UiItemRight>
@@ -79,13 +85,19 @@ const Foodspace = () => {
           <Image src={uiItem} />
           <TextRight>
             <TitleUppercase>Item details</TitleUppercase>
-            <Text>hi</Text>
+            <Text>
+              This is the landing page for the customers (restaurants, grocery
+              stores
+            </Text>
           </TextRight>
         </UiItem>
         <UiItemRight>
           <TextLeft>
             <TitleUppercase>Cart</TitleUppercase>
-            <Text>hi</Text>
+            <Text>
+              This is the landing page for the customers (restaurants, grocery
+              stores
+            </Text>
           </TextLeft>
           <Image src={uiCart} />
         </UiItemRight>
@@ -93,13 +105,19 @@ const Foodspace = () => {
           <Image src={uiOrders} />
           <TextRight>
             <TitleUppercase>All orders</TitleUppercase>
-            <Text>hi</Text>
+            <Text>
+              This is the landing page for the customers (restaurants, grocery
+              stores
+            </Text>
           </TextRight>
         </UiItem>
         <UiItemRight>
           <TextLeft>
             <TitleUppercase>Order</TitleUppercase>
-            <Text>hi</Text>
+            <Text>
+              This is the landing page for the customers (restaurants, grocery
+              stores
+            </Text>
           </TextLeft>
           <Image src={uiOrder} />
         </UiItemRight>
@@ -107,7 +125,10 @@ const Foodspace = () => {
           <Image src={uiInvite} />
           <TextRight>
             <TitleUppercase>Invite friends</TitleUppercase>
-            <Text>hi</Text>
+            <Text>
+              This is the landing page for the customers (restaurants, grocery
+              stores
+            </Text>
           </TextRight>
         </UiItem>
       </ProjectPanel>
@@ -119,12 +140,7 @@ const Foodspace = () => {
           stores, bakeries and cafès) with a signup form for collecting contacts
           from interested bussineses.
         </div>
-        <Image src={uiDiscover} />
-        <Image src={uiInvite} />
-        <Image src={uiItem} />
-        <Image src={uiOrder} />
-        <Image src={uiOrders} />
-        <Image src={uiCart} />
+        <LandingPageImage src={uiDiscover} />
       </ProjectPanel>
     </div>
   );
@@ -209,6 +225,11 @@ const TextLeft = styled.div`
 
 const Text = styled.div`
   margin-top: ${paddingSmall};
+`;
+
+const LandingPageImage = styled(ImageShadow)`
+  margin-top: ${paddingMedium};
+  width: 100%;
 `;
 
 export default Foodspace;
