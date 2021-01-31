@@ -46,15 +46,16 @@ const Contact = () => (
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 60vh;
   padding: ${paddingSmall} 0;
 `;
 
 const Content = styled.div`
   margin: 0 ${xMarginMobile};
+  min-height: 60vh;
   @media ${device.laptop} {
     margin: auto;
     max-width: ${contentWidth};
+    min-height: 45vh;
   }
 
   display: flex;
@@ -65,9 +66,13 @@ const Content = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 600;
   text-align: left;
+
+  @media ${device.laptop} {
+    font-size: 40px;
+  }
 `;
 
 const TextSmall = styled.div`

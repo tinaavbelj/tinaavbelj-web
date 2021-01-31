@@ -4,33 +4,23 @@ import { Link } from "react-router-dom";
 
 import { colors, paddingMedium, device } from "../constants/variables";
 
-const ProjectItem = ({ title, text, imageSource, link, github }) => {
-  const handleGithubClick = (e) => {
-    e.stopPropagation();
-    window.open(github, "_blank");
-  };
-
+const ProjectItem = ({ title, text, imageSource, link, className }) => {
   return (
-    <BoxShadow>
-      <Link to="/icons">
+    <BoxShadow className={className}>
+      <Link to={link}>
         <ImageWrapper>
-          <img src={imageSource} alt="cover" />
+          <Image src={imageSource} alt="cover" />
         </ImageWrapper>
+        <InformationWrapper>
+          <div>
+            <Title>{title}</Title>
+            <Text>{text}</Text>
+          </div>
+          <IconWrapper>
+            <IconArrow src={require("../images/arrow-right.svg")} alt="arrow" />
+          </IconWrapper>
+        </InformationWrapper>
       </Link>
-      <InformationWrapper>
-        <div>
-          <Title>{title}</Title>
-          <Text>{text}</Text>
-        </div>
-        <IconWrapper>
-          <IconGithub
-            src={require("../images/github-brands.svg")}
-            alt="github"
-            onClick={handleGithubClick}
-          />
-          <IconArrow src={require("../images/arrow-right.svg")} alt="arrow" />
-        </IconWrapper>
-      </InformationWrapper>
     </BoxShadow>
   );
 };
@@ -41,9 +31,8 @@ const IconArrow = styled.img`
 
 const BoxShadow = styled.div`
   width: 100%;
-  max-width: 350px;
-  min-width: 300px;
-  background-color: ${colors.backgroundLight};
+  max-width: 450px;
+  background-color: ${colors.white};
   border-radius: 10px;
   box-shadow: 5px 5px 18px rgb(27, 5, 107, 0.1);
   transition: box-shadow 0.2s ease-out;
@@ -61,27 +50,38 @@ const BoxShadow = styled.div`
   }
 
   @media ${device.laptop} {
+    width: 450px;
     &:not(:first-child) {
-      margin-left: ${paddingMedium};
       margin-top: 0;
     }
   }
 `;
 
 const ImageWrapper = styled.div`
-  background-color: ${colors.text};
-  border-radius: 10px 10px 0 0;
-  height: 280px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media ${device.laptop} {
+    width: 450px;
+  }
+`;
+
+const Image = styled.img`
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  object-fit: cover;
 `;
 
 const InformationWrapper = styled.div`
+  color: ${colors.text};
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: space-between;
+  min-height: 226px;
 `;
 
 const Title = styled.div`
@@ -99,17 +99,7 @@ const Text = styled.div`
 const IconWrapper = styled.div`
   padding-right: 6px;
   display: flex;
-  justify-content: space-between;
-`;
-
-const IconGithub = styled.img`
-  transition: 0.2s ease-out;
-  heigth: 24px;
-  width: 24px;
-
-  &:hover {
-    transform: scale(1.2);
-  }
+  justify-content: flex-end;
 `;
 
 export default ProjectItem;

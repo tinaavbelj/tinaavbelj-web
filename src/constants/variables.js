@@ -11,12 +11,13 @@ export const colors = {
 };
 
 export const paddingSmall = "24px";
+export const paddingSmallMedium = "40px";
 export const paddingMedium = "72px";
 export const paddingLarge = "100px";
 
 export const xMarginMobile = "16px";
 
-export const contentWidth = "900px";
+export const contentWidth = "960px";
 export const contentWidthNarrow = "600px";
 
 const size = {

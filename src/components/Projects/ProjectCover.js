@@ -32,13 +32,15 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
+//padding: 0 ${xMarginMobile};
+
 const Content = styled.div`
   margin: 0 ${xMarginMobile};
   @media ${device.laptop} {
     margin: auto;
-    padding: 0 ${xMarginMobile};
+
     min-width: ${contentWidth};
-    max-width: 1400px;
+    max-width: ${contentWidth};
     width: 100%;
   }
 
@@ -56,14 +58,14 @@ const Image = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  padding: ${paddingSmall} 0;
+  padding: ${paddingSmall};
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: ${colors.white};
   @media ${device.laptop} {
-    position: absolute;
-    left: 0;
-    top: 0;
     max-width: 50%;
     height: 100%;
-    color: ${colors.white};
     padding: 0 ${paddingMedium};
   }
 
@@ -73,16 +75,26 @@ const TextWrapper = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   text-align: left;
+
+  @media ${device.laptop} {
+    font-size: 40px;
+  }
 `;
 
 const TextSmall = styled.div`
-  font-size: 24px;
-  font-weight: 500;
   text-align: left;
-  margin-top: 24px;
+  margin-top: 20px;
+
+  &:not(:last-child) {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    font-weight: 600;
+  }
 `;
 
 export default ProjectCover;

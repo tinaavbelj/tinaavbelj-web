@@ -5,11 +5,15 @@ import {
   device,
   contentWidth,
   paddingLarge,
-  paddingMedium,
   xMarginMobile,
+  paddingMedium,
 } from "../constants/variables";
 
 import ProjectItem from "./ProjectItem";
+import Title from "./shared/Title";
+
+import iconsImage from "../images/project-preview-icons.png";
+import iconsFoodspace from "../images/project-preview-foodspace.png";
 
 const Projects = () => (
   <Wrapper>
@@ -17,19 +21,26 @@ const Projects = () => (
       <Title>My Projects</Title>
       <ItemsWrapper>
         <ProjectItem
-          title="Icons"
-          text="A collection of editable svg icons. I am often adding new icons."
-          imageSource={require("../images/icons-project.svg")}
-          link="https://icons.lepus-arcticus.com"
-          github="https://github.com/tinaavbelj/lepus-arcticus-icons"
-        ></ProjectItem>
-        <ProjectItem
-          title="Avatars"
-          text="An avatar maker for svg avatars with different shapes and colors."
-          imageSource={require("../images/avatars-project.svg")}
-          link="https://avatars.lepus-arcticus.com"
+          title="Foodspace"
+          text="A mobile app that enables businesses to sell surplus food"
+          imageSource={iconsFoodspace}
+          link="/foodspace"
           github="https://github.com/tinaavbelj/avatar-maker"
         ></ProjectItem>
+        <ProjectItem
+          title="Icons"
+          text="A collection of editable svg icons that can be downloaded from the website"
+          imageSource={iconsImage}
+          link="/icons"
+          github="https://github.com/tinaavbelj/lepus-arcticus-icons"
+        ></ProjectItem>
+        <StyledProjectItem
+          title="Avatars"
+          text="An avatar maker for svg avatars with different shapes and colors."
+          imageSource={iconsImage}
+          link="https://avatars.lepus-arcticus.com"
+          github="https://github.com/tinaavbelj/avatar-maker"
+        ></StyledProjectItem>
       </ItemsWrapper>
     </Content>
   </Wrapper>
@@ -51,22 +62,20 @@ const Content = styled.div`
   align-items: center;
 `;
 
-const Title = styled.div`
-  margin-bottom: ${paddingMedium};
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-size: 24px;
-`;
-
 const ItemsWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column;
 
   @media ${device.laptop} {
     flex-direction: row;
+  }
+`;
+
+const StyledProjectItem = styled(ProjectItem)`
+  @media ${device.laptop} {
+    margin-top: calc(${paddingMedium} - 10px) !important;
   }
 `;
 
