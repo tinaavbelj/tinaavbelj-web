@@ -71,18 +71,15 @@ const Foodspace = () => {
           <Image src={uiSplashscreen} />
           <TextRight>
             <TitleUppercase>Splashscreen</TitleUppercase>
-            <Text>
-              This is the landing page for the customers (restaurants, grocery
-              stores
-            </Text>
+            <Text>This is the first screen of the app.</Text>
           </TextRight>
         </UiItem>
         <UiItemRight>
           <TextLeft>
             <TitleUppercase>Choose items</TitleUppercase>
             <Text>
-              This is the landing page for the customers (restaurants, grocery
-              stores
+              All available items that users can buy. They can search by nearest
+              location, their favourite locations and top rated.
             </Text>
           </TextLeft>
           <Image src={uiDiscover} />
@@ -92,8 +89,7 @@ const Foodspace = () => {
           <TextRight>
             <TitleUppercase>Item details</TitleUppercase>
             <Text>
-              This is the landing page for the customers (restaurants, grocery
-              stores
+              A screen with item details and add to cart action button.
             </Text>
           </TextRight>
         </UiItem>
@@ -101,8 +97,8 @@ const Foodspace = () => {
           <TextLeft>
             <TitleUppercase>Cart</TitleUppercase>
             <Text>
-              This is the landing page for the customers (restaurants, grocery
-              stores
+              This is the cart from where the users can go to checkout to buy
+              the items.
             </Text>
           </TextLeft>
           <Image src={uiCart} />
@@ -112,8 +108,9 @@ const Foodspace = () => {
           <TextRight>
             <TitleUppercase>All orders</TitleUppercase>
             <Text>
-              This is the landing page for the customers (restaurants, grocery
-              stores
+              A list of all active and past orders. Active orders have a
+              countdown to the time when the item has to be picked up at the
+              location.
             </Text>
           </TextRight>
         </UiItem>
@@ -121,8 +118,8 @@ const Foodspace = () => {
           <TextLeft>
             <TitleUppercase>Order</TitleUppercase>
             <Text>
-              This is the landing page for the customers (restaurants, grocery
-              stores
+              Order screen where the user can press the button after picking up
+              the order to move the order to past orders.
             </Text>
           </TextLeft>
           <Image src={uiOrder} />
@@ -131,10 +128,7 @@ const Foodspace = () => {
           <Image src={uiInvite} />
           <TextRight>
             <TitleUppercase>Invite friends</TitleUppercase>
-            <Text>
-              This is the landing page for the customers (restaurants, grocery
-              stores
-            </Text>
+            <Text>Users can invite friends with their code.</Text>
           </TextRight>
         </UiItem>
       </ProjectPanel>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { device } from "../../../constants/variables";
 
 import Button from "../../shared/Button";
+import Title from "../../shared/Title";
 import TextBig from "../shared/TextBig";
 import image from "../../../images/icons-ui-04.png";
 import ProjectPanel from "../shared/ProjectPanel";
@@ -38,7 +39,9 @@ const Icons = () => {
           </a>
         </LinksWrapper>
       </ProjectPanel>
-      <ProjectPanel>Here are a few icons and the website preview.</ProjectPanel>
+      <ProjectPanel>
+        <Title marginSmall>Website preview</Title>
+      </ProjectPanel>
       <ProjectPanel>
         <Image src={image} />
       </ProjectPanel>
