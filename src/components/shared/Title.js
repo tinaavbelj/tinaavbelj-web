@@ -6,7 +6,7 @@ export const TitleUppercase = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const Title = styled.div`

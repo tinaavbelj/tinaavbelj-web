@@ -21,6 +21,7 @@ import uiItem from "../../../images/foodspace/foodspace-ui-item.png";
 import uiOrder from "../../../images/foodspace/foodspace-ui-order.png";
 import uiOrders from "../../../images/foodspace/foodspace-ui-orders.png";
 import uiCart from "../../../images/foodspace/foodspace-ui-cart.png";
+import uiLandingPage from "../../../images/foodspace/foodspace-landing-page.png";
 
 const Foodspace = () => {
   return (
@@ -140,7 +141,7 @@ const Foodspace = () => {
           stores, bakeries and cafès) with a signup form for collecting contacts
           from interested bussineses.
         </div>
-        <LandingPageImage src={uiDiscover} />
+        <LandingPageImage src={uiLandingPage} />
       </ProjectPanel>
     </div>
   );
