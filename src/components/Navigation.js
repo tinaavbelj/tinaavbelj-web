@@ -1,18 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import {
   device,
   contentWidth,
   paddingSmall,
-  xMarginMobile
+  xMarginMobile,
+  colors,
 } from "../constants/variables";
 
 const Navigation = () => (
   <Wrapper>
     <Content>
-      <Logo src={require("../images/tinaavbelj-logo-darkblue.svg")} />
-      <Name></Name>
+      <div>
+        <Link to="/">
+          <Logo src={require("../images/tinaavbelj-logo-darkblue.svg")} />
+        </Link>
+      </div>
+      <Links>
+        <StyledLink smooth to="/#what-i-do">
+          What I do
+        </StyledLink>
+        <StyledLink smooth to="/#projects">
+          Projects
+        </StyledLink>
+      </Links>
     </Content>
   </Wrapper>
 );
@@ -31,21 +45,41 @@ const Content = styled.div`
   margin: 0 ${xMarginMobile};
   @media ${device.laptop} {
     margin: auto;
+    flex-direction: row;
   }
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
+  flex-direction: column;
 `;
 
 const Logo = styled.img`
   width: 50px;
-  margin-right: ${paddingSmall};
+  margin-bottom: 8px;
+
+  @media ${device.laptop} {
+    margin: auto;
+    margin-bottom: 0;
+    flex-direction: row;
+  }
 `;
 
-const Name = styled.div`
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+const Links = styled.div`
+  display: flex;
+`;
+
+const StyledLink = styled(HashLink)`
+  cursor: pointer;
+  color: ${colors.text};
+
+  &:hover {
+    color: ${colors.primary};
+  }
+
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
 `;
 
 export default Navigation;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {
   device,
   contentWidth,
-  paddingLarge,
+  paddingMedium,
   xMarginMobile,
   colors,
 } from "../constants/variables";
@@ -49,8 +49,8 @@ const Footer = () => (
 
 const Wrapper = styled.div`
   width: 100%;
-  padding: ${paddingLarge} 0;
-  background-color: ${colors.text};
+  padding: ${paddingMedium} 0;
+  background-color: ${colors.white};
 `;
 
 const Content = styled.div`

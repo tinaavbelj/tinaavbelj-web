@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import {
   device,
-  contentWidthNarrow,
+  contentWidth,
   paddingSmall,
   xMarginMobile,
   colors,
@@ -46,15 +46,16 @@ const Contact = () => (
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 60vh;
   padding: ${paddingSmall} 0;
 `;
 
 const Content = styled.div`
   margin: 0 ${xMarginMobile};
+  min-height: 60vh;
   @media ${device.laptop} {
     margin: auto;
-    max-width: ${contentWidthNarrow};
+    max-width: ${contentWidth};
+    min-height: 45vh;
   }
 
   display: flex;
@@ -65,16 +66,25 @@ const Content = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 34px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 600;
   text-align: center;
+
+  @media ${device.laptop} {
+    font-size: 40px;
+    text-align: left;
+  }
 `;
 
 const TextSmall = styled.div`
-  margin-top: ${paddingSmall};
+  margin-top: 32px;
   font-size: 24px;
   font-weight: 500;
   text-align: center;
+
+  @media ${device.laptop} {
+    text-align: left;
+  }
 `;
 
 const LinkText = styled.span`

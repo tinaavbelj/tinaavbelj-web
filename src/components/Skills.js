@@ -6,35 +6,39 @@ import {
   contentWidth,
   paddingLarge,
   paddingMedium,
-  xMarginMobile
+  xMarginMobile,
 } from "../constants/variables";
 
+import Title from "./shared/Title";
+
 const Skills = () => (
-  <Wrapper>
-    <Content>
-      <Title>What I do</Title>
-      <Items>
-        <Item>
-          <ItemIcon
-            src={require("../images/tinaavbelj-icon-react-01.svg")}
-          ></ItemIcon>
-          <Text>React</Text>
-        </Item>
-        <Item>
-          <ItemIcon
-            src={require("../images/tinaavbelj-icon-react-native-01.svg")}
-          ></ItemIcon>
-          <Text>React Native</Text>
-        </Item>
-        <Item>
-          <ItemIcon
-            src={require("../images/tinaavbelj-icon-design-01.svg")}
-          ></ItemIcon>
-          <Text>UI Design</Text>
-        </Item>
-      </Items>
-    </Content>
-  </Wrapper>
+  <section id="what-i-do">
+    <Wrapper>
+      <Content>
+        <Title>What I do</Title>
+        <Items>
+          <Item>
+            <ItemIcon
+              src={require("../images/tinaavbelj-icon-react-01.svg")}
+            ></ItemIcon>
+            <Text>React</Text>
+          </Item>
+          <Item>
+            <ItemIcon
+              src={require("../images/tinaavbelj-icon-react-native-01.svg")}
+            ></ItemIcon>
+            <Text>React Native</Text>
+          </Item>
+          <Item>
+            <ItemIcon
+              src={require("../images/tinaavbelj-icon-design-01.svg")}
+            ></ItemIcon>
+            <Text>UI Design</Text>
+          </Item>
+        </Items>
+      </Content>
+    </Wrapper>
+  </section>
 );
 
 const Wrapper = styled.div`
@@ -51,14 +55,6 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const Title = styled.div`
-  margin-bottom: ${paddingMedium};
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 600;
-  font-size: 24px;
 `;
 
 const Items = styled.div`

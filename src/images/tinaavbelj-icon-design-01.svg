@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#262266;stroke-width:1.51;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#000000;stroke-width:1.51;stroke-miterlimit:10;}
 	.st1{fill:#EE2964; 		
 	animation: scale 3s ease-in-out infinite;}
 	
@@ -15,10 +15,10 @@
 		fill:#EE2964;
 		}
 		60% {
-		fill:#262266;
+		fill:#000000;
 		}
 		70% {
-		fill:#262266;
+		fill:#000000;
 		}
 		90% {
 			fill:#EE2964;
