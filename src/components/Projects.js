@@ -65,6 +65,7 @@ const Content = styled.div`
 `;
 
 const ItemsWrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -76,6 +77,7 @@ const ItemsWrapper = styled.div`
 `;
 
 const StyledProjectItem = styled(ProjectItem)`
+  display: none;
   @media ${device.laptop} {
     margin-top: calc(${paddingMedium} - 10px) !important;
   }
