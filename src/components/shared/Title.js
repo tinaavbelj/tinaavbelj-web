@@ -5,7 +5,7 @@ import { paddingMedium, paddingSmallMedium } from "../../constants/variables";
 export const TitleUppercase = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
 `;
 

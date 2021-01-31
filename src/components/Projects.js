@@ -12,8 +12,8 @@ import {
 import ProjectItem from "./ProjectItem";
 import Title from "./shared/Title";
 
-import iconsImage from "../images/project-preview-icons.png";
-import iconsFoodspace from "../images/project-preview-foodspace.png";
+import iconsImage from "../images/icons/icons-preview.png";
+import iconsFoodspace from "../images/foodspace/foodspace-preview.png";
 
 const Projects = () => (
   <section id="projects">

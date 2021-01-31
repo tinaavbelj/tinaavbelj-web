@@ -149,6 +149,7 @@ const Foodspace = () => {
 const Image = styled(ImageShadow)`
   width: 100%;
   max-width: 300px;
+  height: 100%;
 `;
 
 const ItemsWrapper = styled.div`

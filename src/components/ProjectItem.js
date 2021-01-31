@@ -81,7 +81,7 @@ const InformationWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: space-between;
-  min-height: 226px;
+  min-height: 190px;
 `;
 
 const Title = styled.div`
@@ -89,7 +89,7 @@ const Title = styled.div`
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
 `;
 
 const Text = styled.div`

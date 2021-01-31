@@ -17,6 +17,7 @@ const ProjectPanel = ({ children }) => {
 };
 
 const Wrapper = styled.div`
+  font-weight: 400;
   width: 100%;
   margin: ${paddingLarge} 0;
 `;

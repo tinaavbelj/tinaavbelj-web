@@ -72,6 +72,7 @@ const Links = styled.div`
 const StyledLink = styled(HashLink)`
   cursor: pointer;
   color: ${colors.text};
+  font-weight: 500;
 
   &:hover {
     color: ${colors.primary};

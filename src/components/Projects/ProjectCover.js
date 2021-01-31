@@ -87,13 +87,14 @@ const Text = styled.div`
 const TextSmall = styled.div`
   text-align: left;
   margin-top: 20px;
+  font-weight: 500;
 
   &:not(:last-child) {
     text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 2px;
     opacity: 0.7;
-    font-weight: 600;
+    font-weight: 700;
   }
 `;
 
