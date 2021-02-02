@@ -43,7 +43,7 @@ const Foodspace = () => {
       <ProjectPanel>
         <Title marginSmall>Background</Title>
         The amount of food waste is huge. One third of all produced food is
-        wasted. In Slovenia alone there is around 130 000 tons of food waste
+        wasted. In Slovenia alone there is around 130000 tons of food waste
         every year. 19% of all food waste in Slovenia comes from facilities that
         serve food like restaurants and almost 10% comes from grocery stores.
         38% of all the wasted food is still edible. This is the waste Foodspace

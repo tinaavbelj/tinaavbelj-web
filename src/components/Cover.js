@@ -12,7 +12,10 @@ import {
 const Contact = () => (
   <Wrapper>
     <Content>
-      <Text>Hi. I am Tina. I am a frontend developer based in Ljubljana.</Text>
+      <Text>
+        Hi. I am Tina. I am a frontend developer and UI designer based in
+        Ljubljana.
+      </Text>
       <TextSmall>
         You can find my programming related stuff on{" "}
         <a

@@ -12,7 +12,11 @@ import {
 const Footer = () => (
   <Wrapper>
     <Content>
-      <a href="mailto:tina.avbelj@gmail.com" target="_top">
+      <a
+        href="mailto:tina.avbelj@gmail.com"
+        target="_top"
+        style={{ display: "none" }}
+      >
         <IconBackground>
           <Icon src={require("../images/mail-pink.svg")} />
         </IconBackground>

@@ -55,7 +55,7 @@ const Content = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 50px;
+  width: 42px;
   margin-bottom: 8px;
 
   @media ${device.laptop} {
