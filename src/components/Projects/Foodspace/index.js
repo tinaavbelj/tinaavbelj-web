@@ -36,8 +36,8 @@ const Foodspace = () => {
           UI for the Foodspace mobile app was created as a part of an
           exploration of a business idea. Foodspace app enables users to buy
           surplus food for discount prices and restaurants, grocery stores,
-          bakeries and cafes to sell their surplus food. The results is less
-          food waste.
+          bakeries and cafes to sell their surplus food. The result is less food
+          waste.
         </TextBig>
       </ProjectPanel>
       <ProjectPanel>
