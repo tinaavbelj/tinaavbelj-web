@@ -12,6 +12,7 @@ import Icons from "./components/Projects/Icons";
 import Navigation from "./components/Navigation";
 import Projects from "./components/Projects";
 import ProjectCover from "./components/Projects/ProjectCover";
+import Shelters from "./components/Projects/Shelters";
 import Skills from "./components/Skills";
 
 import projectContent from "./content/projects";
@@ -29,6 +30,10 @@ function App() {
           <Route path="/foodspace">
             <ProjectCover content={projectContent[1]} />
             <Foodspace />
+          </Route>
+          <Route path="/shelters">
+            <ProjectCover content={projectContent[2]} />
+            <Shelters />
           </Route>
           <Route path="/">
             <Cover />

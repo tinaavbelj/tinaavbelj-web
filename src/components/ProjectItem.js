@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { colors, paddingMedium, device } from "../constants/variables";
+import { colors, device } from "../constants/variables";
 
-const ProjectItem = ({ title, text, imageSource, link, className }) => {
+const ProjectItem = ({ title, type, text, imageSource, link, className }) => {
   return (
     <BoxShadow className={className}>
       <Link to={link}>
@@ -14,6 +14,7 @@ const ProjectItem = ({ title, text, imageSource, link, className }) => {
         <InformationWrapper>
           <div>
             <Title>{title}</Title>
+            <Type>{type}</Type>
             <Text>{text}</Text>
           </div>
           <IconWrapper>
@@ -31,6 +32,7 @@ const IconArrow = styled.img`
 
 const BoxShadow = styled.div`
   width: 100%;
+  height: 100%;
   max-width: 450px;
   background-color: ${colors.white};
   border-radius: 10px;
@@ -42,17 +44,6 @@ const BoxShadow = styled.div`
 
     ${IconArrow} {
       transform: translateX(6px);
-    }
-  }
-
-  &:not(:first-child) {
-    margin-top: ${paddingMedium};
-  }
-
-  @media ${device.laptop} {
-    width: 450px;
-    &:not(:first-child) {
-      margin-top: 0;
     }
   }
 `;
@@ -85,6 +76,12 @@ const InformationWrapper = styled.div`
 `;
 
 const Title = styled.div`
+  margin-bottom: 0.75rem;
+  font-size: 24px;
+  font-weight: 600;
+`;
+
+const Type = styled.div`
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
