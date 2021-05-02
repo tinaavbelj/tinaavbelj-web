@@ -27,7 +27,10 @@ const Icons = () => {
       </ProjectPanel>
       <ProjectPanel>
         <LinksWrapper>
-          <Link href="https://icons.lepus-arcticus.com/" target="_blank">
+          <Link
+            href="https://lepus-arcticus-icons.netlify.app/"
+            target="_blank"
+          >
             <StyledButton>Website</StyledButton>
           </Link>
           <a
