@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { colors } from "./constants/variables";
 
+import Animations from "./components/Projects/Animations";
 import Cover from "./components/Cover";
 import Foodspace from "./components/Projects/Foodspace";
 import Footer from "./components/Footer";
@@ -34,6 +35,9 @@ function App() {
           <Route path="/shelters">
             <ProjectCover content={projectContent[2]} />
             <Shelters />
+          </Route>
+          <Route path="/animations">
+            <Animations />
           </Route>
           <Route path="/">
             <Cover />
